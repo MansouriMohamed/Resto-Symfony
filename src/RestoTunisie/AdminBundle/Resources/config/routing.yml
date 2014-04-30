@@ -1,0 +1,7 @@
+admin_homepage:
+    pattern:  /
+    defaults: { _controller: AdminBundle:Default:index }
+    
+admin_dashboard:
+    pattern:  /dashboard.html
+    defaults: { _controller: AdminBundle:Default:dashboard }

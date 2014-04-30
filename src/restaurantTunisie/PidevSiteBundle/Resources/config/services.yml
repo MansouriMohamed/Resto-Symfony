@@ -1,0 +1,7 @@
+parameters:
+#    pidev_site.example.class: restaurantTunisie\PidevSiteBundle\Example
+
+services:
+#    pidev_site.example:
+#        class: %pidev_site.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
