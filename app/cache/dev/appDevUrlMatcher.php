@@ -152,37 +152,18 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         if (0 === strpos($pathinfo, '/Site')) {
             // pidev_site_homepage
-            if (rtrim($pathinfo, '/') === '/Site') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'pidev_site_homepage');
-                }
-
+            if ($pathinfo === '/Site/index') {
                 return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\DefaultController::indexAction',  '_route' => 'pidev_site_homepage',);
             }
 
-            // pidev_site_page1
-            if ($pathinfo === '/Site/1.html') {
-                return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\DefaultController::page1Action',  '_route' => 'pidev_site_page1',);
+            // pidev_site_details
+            if ($pathinfo === '/Site/details') {
+                return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\DefaultController::detailsAction',  '_route' => 'pidev_site_details',);
             }
 
-            // pidev_site_page2
-            if ($pathinfo === '/Site/2.html') {
-                return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\DefaultController::page2Action',  '_route' => 'pidev_site_page2',);
-            }
-
-            // pidev_site_page3
-            if ($pathinfo === '/Site/3.html') {
-                return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\DefaultController::page3Action',  '_route' => 'pidev_site_page3',);
-            }
-
-            // pidev_site_page4
-            if ($pathinfo === '/Site/4.html') {
-                return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\DefaultController::page4Action',  '_route' => 'pidev_site_page4',);
-            }
-
-            // pidev_site_page@
-            if ($pathinfo === '/Site/@.html') {
-                return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\DefaultController::pageAction',  '_route' => 'pidev_site_page@',);
+            // pidev_site_liste
+            if ($pathinfo === '/Site/liste') {
+                return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\DefaultController::listeAction',  '_route' => 'pidev_site_liste',);
             }
 
         }

@@ -1,23 +1,12 @@
 pidev_site_homepage:
-    pattern:  /
+    pattern:  /index
     defaults: { _controller: PidevSiteBundle:Default:index }
 
-pidev_site_page1:
-    pattern:  /1.html
-    defaults: { _controller: PidevSiteBundle:Default:page1 }
+pidev_site_details:
+    pattern:  /details
+    defaults: { _controller: PidevSiteBundle:Default:details }
     
-pidev_site_page2:
-    pattern:  /2.html
-    defaults: { _controller: PidevSiteBundle:Default:page2 }
+pidev_site_liste:
+    pattern:  /liste
+    defaults: { _controller: PidevSiteBundle:Default:liste }
     
-pidev_site_page3:
-    pattern:  /3.html
-    defaults: { _controller: PidevSiteBundle:Default:page3 }
-    
-pidev_site_page4:
-    pattern:  /4.html
-    defaults: { _controller: PidevSiteBundle:Default:page4 }
-    
-pidev_site_page@:
-    pattern:  /@.html
-    defaults: { _controller: PidevSiteBundle:Default:page }

@@ -1,0 +1,43 @@
+{% extends "PidevSiteBundle:Default:layout.html.twig" %}
+{%block content%}
+                    <div class="row">
+                        <div class="col-md-12 placeholder">
+                            <img src="{{ asset ('Bundles/PidevSite/img/placeholder1.png')}}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+       
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul id="tabs_point">
+                                <li><a href="#" class="active">Comments <span>(2)</span></a></li>
+                                <li><a href="#">Photo <span>(23)</span></a></li>
+                                <li><a href="#">Was here <span>(2)</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tabs_block_point">
+                                <div id="point_tab1" class="tab_point_decr active">
+                                    <!--Comment-->
+                                    <div class="row comm">
+                                        <div class="col-md-12 comment">
+                                            <img src="{{asset('Bundles/PidevSite/img/no_ava.png')}}"><div class="infocomment">
+                                                <div><a href="#">Mattew An</a>23.12.2013   13:22</div>
+                                                <div class="rating">
+                                                    <img src="img/start.gif"><a href="#" class="btn-default btn-rouned">+</a><a href="#" class="btn-default btn-rouned">-</a>
+                                                </div>
+                                            </div>
+                                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also </span>
+                                        </div>
+                                    </div>
+                                    <!--/Comment-->
+                                   
+                                    <a href="%40.html" class="btn btn-danger btn-sm">Add comment</a>
+                                </div>
+ {%endblock%}                              

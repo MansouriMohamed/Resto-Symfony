@@ -188,30 +188,7 @@ class __TwigTemplate_94eb92cc3952b644561e374f35486f7d extends Twig_Template
                 <li>
                     <a href=\"#\" class=\"gradientmenu active\"><i class=\"icon-chef\"></i></a>
                 </li>
-                <li>
-                    <a href=\"#\" class=\"gradientmenu\"><i class=\"icon-football-soccer\"></i></a>
-                </li>
-                <li>
-                    <a href=\"#\" class=\"gradientmenu\"><i class=\"icon-controllerps\"></i></a>
-                </li>
-                <li>
-                    <a href=\"#\" class=\"gradientmenu\"><i class=\"icon-leaf\"></i></a>
-                </li>
-                <li>
-                    <a href=\"#\" class=\"gradientmenu\"><i class=\"icon-shopping\"></i></a>
-                </li>
-                <li>
-                    <a href=\"#\" class=\"gradientmenu\"><i class=\"icon-student-school\"></i></a>
-                </li>
-                <li>
-                    <a href=\"#\" class=\"gradientmenu\"><i class=\"icon-wine\"></i></a>
-                </li>
-                <li>
-                    <a href=\"#\" class=\"gradientmenu\"><i class=\"icon-wallet\"></i></a>
-                </li>
-                <li>
-                    <a href=\"#\" class=\"gradientmenu\"><i class=\"icon-bus\"></i></a>
-                </li>
+                
             </ul>
         </div>
         <!--Profile-->
@@ -414,7 +391,7 @@ class __TwigTemplate_94eb92cc3952b644561e374f35486f7d extends Twig_Template
                     <!--news-->
                     <div class=\"row news_container\">
                         <div class=\"col-md-8 news\">
-                            <span class=\"data\">12.11.2013</span> You friend <a href=\"#\">Mattew An</a> visited restaurant \"<a href=\"4.html\">Pizza larenzo</a>\"
+                            <span class=\"data\">12.11.2013</span> You friend <a href=\"#\">Mattew An</a> visited restaurant \"<a href=\"liste\">Pizza larenzo</a>\"
                              <div id=\"map2\" class=\"map_in_news\"></div>
                         </div>
                         <div class=\"col-md-4 news_user_info\">
@@ -462,7 +439,7 @@ class __TwigTemplate_94eb92cc3952b644561e374f35486f7d extends Twig_Template
                     <!--news-->
                     <div class=\"row news_container\">
                         <div class=\"col-md-8 news\">
-                            <span class=\"data\">12.11.2013</span> You friend <a href=\"#\">Mattew An</a> visited restaurant \"<a href=\"4.html\">Pizza larenzo</a>\"
+                            <span class=\"data\">12.11.2013</span> You friend <a href=\"#\">Mattew An</a> visited restaurant \"<a href=\"liste\">Pizza larenzo</a>\"
                              <div id=\"map3\" class=\"map_in_news\"></div>
                         </div>
                         <div class=\"col-md-4 news_user_info\">
@@ -513,100 +490,8 @@ class __TwigTemplate_94eb92cc3952b644561e374f35486f7d extends Twig_Template
                                 <li><a href=\"#\">Bar<span>22</span></a></li>
                             </ul>
                         </div>
-                        <div id=\"tab2\" class=\"tab\">
-                            <h5 class=\"cat\">Sport</h5>
-                            <ul class=\"catalog\">
-                                <li><a href=\"#\">Stadion<span>22</span></a></li>
-                                <li><a href=\"#\">Sport Bar<span>22</span></a></li>
-                                <li><a href=\"#\">Football<span>22</span></a></li>
-                                <li><a href=\"#\" class=\"activepoint\">Fitness<span>22</span><p class=\"arrow\"></p>
-                                </a></li>
-                                <li><a href=\"#\">Bowling<span>22</span></a></li>
-
-                            </ul>
-                        </div>
-                        <div id=\"tab3\" class=\"tab\">
-                            <h5 class=\"cat\">Games</h5>
-                            <ul class=\"catalog\">
-                                <li><a href=\"#\">Internet cafe<span>22</span></a></li>
-                                <li><a href=\"#\">Dota<span>22</span></a></li>
-                                <li><a href=\"#\">Chempions<span>22</span></a></li>
-                                <li><a href=\"#\" class=\"activepoint\">Video game centre<span>22</span><p class=\"arrow\"></p>
-                                </a></li>
-                                <li><a href=\"#\">Classic game<span>22</span></a></li>
-                            </ul>
-                        </div>
-                        <div id=\"tab4\" class=\"tab\">
-                            <h5 class=\"cat\">Eco, parks</h5>
-                            <ul class=\"catalog\">
-                                <li><a href=\"#\">Cafe<span>22</span></a></li>
-                                <li><a href=\"#\">Bar<span>22</span></a></li>
-                                <li><a href=\"#\">Restaurant<span>22</span></a></li>
-                                <li><a href=\"#\" class=\"activepoint\">Fast food<span>22</span><p class=\"arrow\"></p>
-                                </a></li>
-                                <li><a href=\"#\">Canteens<span>22</span></a></li>
-                                <li><a href=\"#\">Pitstop<span>22</span></a></li>
-                                <li><a href=\"#\">Cafe<span>22</span></a></li>
-                                <li><a href=\"#\">Bar<span>22</span></a></li>
-                            </ul>
-                        </div>
-                        <div id=\"tab5\" class=\"tab\">
-                            <h5 class=\"cat\">Shopping</h5>
-                            <ul class=\"catalog\">
-                                <li><a href=\"#\">Internet cafe<span>22</span></a></li>
-                                <li><a href=\"#\">Dota<span>22</span></a></li>
-                                <li><a href=\"#\">Chempions<span>22</span></a></li>
-                                <li><a href=\"#\" class=\"activepoint\">Video game centre<span>22</span><p class=\"arrow\"></p>
-                                </a></li>
-                                <li><a href=\"#\">Classic game<span>22</span></a></li>
-                            </ul>
-                        </div>
-                        <div id=\"tab6\" class=\"tab\">
-                            <h5 class=\"cat\">University, School</h5>
-                            <ul class=\"catalog\">
-                                <li><a href=\"#\">Stadion<span>22</span></a></li>
-                                <li><a href=\"#\">Sport Bar<span>22</span></a></li>
-                                <li><a href=\"#\">Football<span>22</span></a></li>
-                                <li><a href=\"#\" class=\"activepoint\">Fitness<span>22</span><p class=\"arrow\"></p>
-                                </a></li>
-                                <li><a href=\"#\">Bowling<span>22</span></a></li>
-                            </ul>
-                        </div>
-                        <div id=\"tab7\" class=\"tab\">
-                            <h5 class=\"cat\">Bars</h5>
-                            <ul class=\"catalog\">
-                                <li><a href=\"#\">Cafe<span>22</span></a></li>
-                                <li><a href=\"#\">Bar<span>22</span></a></li>
-                                <li><a href=\"#\">Restaurant<span>22</span></a></li>
-                                <li><a href=\"#\" class=\"activepoint\">Fast food<span>22</span><p class=\"arrow\"></p>
-                                </a></li>
-                                <li><a href=\"#\">Canteens<span>22</span></a></li>
-                                <li><a href=\"#\">Pitstop<span>22</span></a></li>
-                                <li><a href=\"#\">Cafe<span>22</span></a></li>
-                                <li><a href=\"#\">Bar<span>22</span></a></li>
-                            </ul>
-                        </div>
-                        <div id=\"tab8\" class=\"tab\">
-                            <h5 class=\"cat\">Banks</h5>
-                            <ul class=\"catalog\">
-                                <li><a href=\"#\">Internet cafe<span>22</span></a></li>
-                                <li><a href=\"#\">Dota<span>22</span></a></li>
-                                <li><a href=\"#\">Chempions<span>22</span></a></li>
-                                <li><a href=\"#\" class=\"activepoint\">Video game centre<span>22</span><p class=\"arrow\"></p>
-                                </a></li>
-                                <li><a href=\"#\">Classic game<span>22</span></a></li>
-                            </ul>
-                        </div>
-                        <div id=\"tab9\" class=\"tab\">
-                            <h5 class=\"cat\">Bus</h5>
-                            <ul class=\"catalog\">
-                                <li><a href=\"#\">Stadion<span>22</span></a></li>
-                                <li><a href=\"#\">Sport Bar<span>22</span></a></li>
-                                <li><a href=\"#\">Football<span>22</span></a></li>
-                                <li><a href=\"#\" class=\"activepoint\">Fitness<span>22</span><p class=\"arrow\"></p>
-                                </a></li>
-                                <li><a href=\"#\">Bowling<span>22</span></a></li>
-                            </ul>
+                        
+                        
                         </div>
                     </div>
                 </div>
@@ -616,8 +501,8 @@ class __TwigTemplate_94eb92cc3952b644561e374f35486f7d extends Twig_Template
             <div class=\"row search_inner_box\">
                 <div class=\"col-md-12\">
                     <input type=\"text\" class=\"form-control input-sm\" placeholder=\"Text input\" />
-                    <a href=\"4.html\" class=\"btn btn-danger btn-sm pd-top\">Search</a>
-                    <a href=\"3.html\" class=\"btn btn-primary btn-sm pd-top\">Show places near me</a>
+                    <a href=\"liste\" class=\"btn btn-danger btn-sm pd-top\">Search</a>
+                    <a href=\"details\" class=\"btn btn-primary btn-sm pd-top\">Show places near me</a>
                 </div>
             </div>
             <!--/search-->
@@ -626,7 +511,10 @@ class __TwigTemplate_94eb92cc3952b644561e374f35486f7d extends Twig_Template
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src=\"js/bootstrap.js\"></script>
+    <script src=\"";
+        // line 475
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Bundles/PidevSitejs/bootstrap.js"), "html", null, true);
+        echo "\"></script>
 </body>
 </html>
 
@@ -647,6 +535,6 @@ class __TwigTemplate_94eb92cc3952b644561e374f35486f7d extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  58 => 20,  54 => 19,  50 => 18,  44 => 15,  35 => 9,  31 => 8,  27 => 7,  19 => 1,);
+        return array (  516 => 475,  58 => 20,  54 => 19,  50 => 18,  44 => 15,  35 => 9,  31 => 8,  27 => 7,  19 => 1,);
     }
 }

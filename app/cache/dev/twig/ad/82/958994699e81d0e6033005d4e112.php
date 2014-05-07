@@ -83,7 +83,10 @@ class __TwigTemplate_ad82958994699e81d0e6033005d4e112 extends Twig_Template
         })
     </script>
     <!--Script for worked profile page-->
-    <script type=\"text/javascript\" src=\"js/owl.carousel.js\"></script>
+    <script type=\"text/javascript\" src=\"";
+        // line 47
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Bundles/PidevSite/js/owl.carousel.js"), "html", null, true);
+        echo "\"></script>
     <script type=\"text/javascript\">
         \$(document).ready(function () {
             \$('#link_open').on('click', function () {
@@ -167,48 +170,27 @@ class __TwigTemplate_ad82958994699e81d0e6033005d4e112 extends Twig_Template
     <!--/map-->
     <div class=\"row site\">
         <div class=\"col-md-1 general_menu inner\">
-            <a href=\"#\" class=\"avatar\">
-                <img src=\"img/no_ava.png\" /></a>
+            
 
             <ul>
                 <li>
                     <a href=\"2.html\" class=\"gradientmenu\"><i class=\"icon-chef\"></i></a>
                 </li>
-                <li>
-                    <a href=\"2.html\" class=\"gradientmenu\"><i class=\"icon-football-soccer\"></i></a>
-                </li>
-                <li>
-                    <a href=\"2.html\" class=\"gradientmenu\"><i class=\"icon-controllerps\"></i></a>
-                </li>
-                <li>
-                    <a href=\"2.html\" class=\"gradientmenu\"><i class=\"icon-leaf\"></i></a>
-                </li>
-                <li>
-                    <a href=\"2.html\" class=\"gradientmenu\"><i class=\"icon-shopping\"></i></a>
-                </li>
-                <li>
-                    <a href=\"2.html\" class=\"gradientmenu\"><i class=\"icon-student-school\"></i></a>
-                </li>
-                <li>
-                    <a href=\"2.html\" class=\"gradientmenu\"><i class=\"icon-wine\"></i></a>
-                </li>
-                <li>
-                    <a href=\"2.html\" class=\"gradientmenu\"><i class=\"icon-wallet\"></i></a>
-                </li>
-                <li>
-                    <a href=\"2.html\" class=\"gradientmenu\"><i class=\"icon-bus\"></i></a>
-                </li>
+                
 
             </ul>
         </div>
         <!--Profile-->
-        <span class=\"close_span\" id=\"open_span\"><a href=\"#\" class=\"close-profile-link clooses\" id=\"link_open\">+</a></span>
+        <span class=\"close_span\" id=\"open_span\"></span>
         <div class=\"col-md-12 profile profile_closed\" id=\"profile\">
             <!--User info-->
             <div class=\"row\">
                 <div class=\"col-md-12\">
                     <div class=\"user\">
-                        <img src=\"img/ava1.png\" />
+                        <img src=\"";
+        // line 148
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Bundles/PidevSite/img/ava1.png"), "html", null, true);
+        echo "\" />
                         <div>
                             <h2>Mattew An</h2>
                             <ul>
@@ -487,13 +469,13 @@ class __TwigTemplate_ad82958994699e81d0e6033005d4e112 extends Twig_Template
                 <div class=\"col-md-12 point_description\">
                     <div class=\"row\">
                         <div class=\"col-md-6\">
-                            <img src=\"img/icon/01.png\" class=\"point\" />
+                            <img src=\"";
+        // line 427
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Bundles/PidevSite/img/icon/01.png"), "html", null, true);
+        echo "\" class=\"point\" />
                             <h2>Stadion Dinamo</h2>
                         </div>
-                        <div class=\"col-md-6 btns\">
-                            <a href=\"#\" class=\"btn btn-default btn-sm buttons_head\"><i class=\"icon-user\"></i>Invite a friend</a>
-                            <a href=\"#\" class=\"btn btn-danger btn-sm buttons_head\"><i class=\"icon-automobile-car\"></i></a>
-                        </div>
+                       
                     </div>
                     <div class=\"row\">
                         <div class=\"col-md-12\">
@@ -503,7 +485,10 @@ class __TwigTemplate_ad82958994699e81d0e6033005d4e112 extends Twig_Template
                     </div>
                     <div class=\"row\">
                         <div class=\"col-md-12 placeholder\">
-                            <img src=\"img/placeholder1.png\">
+                            <img src=\"";
+        // line 440
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Bundles/PidevSite/img/placeholder1.png"), "html", null, true);
+        echo "\">
                         </div>
                     </div>
                     <div class=\"row\">
@@ -528,7 +513,10 @@ class __TwigTemplate_ad82958994699e81d0e6033005d4e112 extends Twig_Template
                                     <!--Comment-->
                                     <div class=\"row comm\">
                                         <div class=\"col-md-12 comment\">
-                                            <img src=\"img/no_ava.png\"><div class=\"infocomment\">
+                                            <img src=\"";
+        // line 465
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("Bundles/PidevSite/img/no_ava.png"), "html", null, true);
+        echo "\"><div class=\"infocomment\">
                                                 <div><a href=\"#\">Mattew An</a>23.12.2013   13:22</div>
                                                 <div class=\"rating\">
                                                     <img src=\"img/start.gif\"><a href=\"#\" class=\"btn-default btn-rouned\">+</a><a href=\"#\" class=\"btn-default btn-rouned\">-</a>
@@ -538,58 +526,7 @@ class __TwigTemplate_ad82958994699e81d0e6033005d4e112 extends Twig_Template
                                         </div>
                                     </div>
                                     <!--/Comment-->
-                                    <!--Comment-->
-                                    <div class=\"row comm\">
-                                        <div class=\"col-md-12 comment\">
-                                            <img src=\"img/no_ava.png\"><div class=\"infocomment\">
-                                                <div><a href=\"#\">Mattew An</a>23.12.2013   13:22</div>
-                                                <div class=\"rating\">
-                                                    <img src=\"img/start.gif\"><a href=\"#\" class=\"btn-default btn-rouned\">+</a><a href=\"#\" class=\"btn-default btn-rouned\">-</a>
-                                                </div>
-                                            </div>
-                                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also </span>
-                                        </div>
-                                    </div>
-                                    <!--/Comment-->
-                                    <!--Comment-->
-                                    <div class=\"row comm\">
-                                        <div class=\"col-md-12 comment\">
-                                            <img src=\"img/no_ava.png\"><div class=\"infocomment\">
-                                                <div><a href=\"#\">Mattew An</a>23.12.2013   13:22</div>
-                                                <div class=\"rating\">
-                                                    <img src=\"img/start.gif\"><a href=\"#\" class=\"btn-default btn-rouned\">+</a><a href=\"#\" class=\"btn-default btn-rouned\">-</a>
-                                                </div>
-                                            </div>
-                                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also </span>
-                                        </div>
-                                    </div>
-                                    <!--/Comment-->
-                                    <!--Comment-->
-                                    <div class=\"row comm\">
-                                        <div class=\"col-md-12 comment\">
-                                            <img src=\"img/no_ava.png\"><div class=\"infocomment\">
-                                                <div><a href=\"#\">Mattew An</a>23.12.2013   13:22</div>
-                                                <div class=\"rating\">
-                                                    <img src=\"img/start.gif\"><a href=\"#\" class=\"btn-default btn-rouned\">+</a><a href=\"#\" class=\"btn-default btn-rouned\">-</a>
-                                                </div>
-                                            </div>
-                                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also </span>
-                                        </div>
-                                    </div>
-                                    <!--/Comment-->
-                                    <!--Comment-->
-                                    <div class=\"row comm\">
-                                        <div class=\"col-md-12 comment\">
-                                            <img src=\"img/no_ava.png\"><div class=\"infocomment\">
-                                                <div><a href=\"#\">Mattew An</a>23.12.2013   13:22</div>
-                                                <div class=\"rating\">
-                                                    <img src=\"img/start.gif\"><a href=\"#\" class=\"btn-default btn-rouned\">+</a><a href=\"#\" class=\"btn-default btn-rouned\">-</a>
-                                                </div>
-                                            </div>
-                                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also </span>
-                                        </div>
-                                    </div>
-                                    <!--/Comment-->
+                                   
                                     <a href=\"%40.html\" class=\"btn btn-danger btn-sm\">Add comment</a>
                                 </div>
                                 <div id=\"point_tab2\" class=\"tab_point_decr photo\">
@@ -765,6 +702,6 @@ class __TwigTemplate_ad82958994699e81d0e6033005d4e112 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  58 => 20,  54 => 19,  50 => 18,  44 => 15,  35 => 9,  31 => 8,  27 => 7,  19 => 1,);
+        return array (  518 => 465,  490 => 440,  474 => 427,  192 => 148,  88 => 47,  58 => 20,  54 => 19,  50 => 18,  44 => 15,  35 => 9,  31 => 8,  27 => 7,  19 => 1,);
     }
 }
