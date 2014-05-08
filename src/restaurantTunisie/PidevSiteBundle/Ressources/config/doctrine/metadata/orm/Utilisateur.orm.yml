@@ -1,0 +1,28 @@
+Utilisateur:
+    type: entity
+    table: utilisateur
+    fields:
+        idutilisateur:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        login:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+        motDePasse:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: mot_de_passe
+        type:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+    lifecycleCallbacks: {  }

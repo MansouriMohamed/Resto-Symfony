@@ -1,0 +1,21 @@
+Menu:
+    type: entity
+    table: menu
+    fields:
+        idmenu:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        prix:
+            type: integer
+            unsigned: false
+            nullable: false
+        nom:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+    lifecycleCallbacks: {  }

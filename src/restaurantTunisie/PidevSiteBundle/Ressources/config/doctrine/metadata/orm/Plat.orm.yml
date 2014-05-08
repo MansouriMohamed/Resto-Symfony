@@ -1,0 +1,33 @@
+Plat:
+    type: entity
+    table: plat
+    fields:
+        idplat:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        idRestaurant:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_restaurant
+        nomPlat:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+            column: nom_plat
+        descriptionPlat:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+            column: description_plat
+        prixPlat:
+            type: float
+            nullable: false
+            column: prix_plat
+    lifecycleCallbacks: {  }

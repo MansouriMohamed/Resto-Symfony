@@ -1,0 +1,31 @@
+Reservation:
+    type: entity
+    table: reservation
+    fields:
+        idreservation:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        date:
+            type: integer
+            unsigned: false
+            nullable: false
+        idClient:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_client
+        idRestaurant:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_restaurant
+        idRestaurateur:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_restaurateur
+    lifecycleCallbacks: {  }

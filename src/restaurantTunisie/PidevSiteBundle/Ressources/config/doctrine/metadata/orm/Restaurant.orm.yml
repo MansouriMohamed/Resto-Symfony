@@ -1,0 +1,31 @@
+Restaurant:
+    type: entity
+    table: restaurant
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nom:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+        adresse:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+        numero:
+            type: integer
+            unsigned: false
+            nullable: false
+        idRestaurateur:
+            type: integer
+            unsigned: false
+            nullable: false
+            column: id_restaurateur
+    lifecycleCallbacks: {  }
