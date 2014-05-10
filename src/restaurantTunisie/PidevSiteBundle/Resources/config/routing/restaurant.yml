@@ -1,0 +1,30 @@
+restaurant:
+    pattern:  /
+    defaults: { _controller: "PidevSiteBundle:Restaurant:index" }
+
+restaurant_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "PidevSiteBundle:Restaurant:show" }
+
+restaurant_new:
+    pattern:  /new
+    defaults: { _controller: "PidevSiteBundle:Restaurant:new" }
+
+restaurant_create:
+    pattern:  /create
+    defaults: { _controller: "PidevSiteBundle:Restaurant:create" }
+    requirements: { _method: post }
+
+restaurant_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "PidevSiteBundle:Restaurant:edit" }
+
+restaurant_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "PidevSiteBundle:Restaurant:update" }
+    requirements: { _method: post|put }
+
+restaurant_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "PidevSiteBundle:Restaurant:delete" }
+    requirements: { _method: post|delete }

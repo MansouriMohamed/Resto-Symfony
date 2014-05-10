@@ -1,0 +1,30 @@
+commentaire:
+    pattern:  /
+    defaults: { _controller: "PidevSiteBundle:Commentaire:index" }
+
+commentaire_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "PidevSiteBundle:Commentaire:show" }
+
+commentaire_new:
+    pattern:  /new
+    defaults: { _controller: "PidevSiteBundle:Commentaire:new" }
+
+commentaire_create:
+    pattern:  /create
+    defaults: { _controller: "PidevSiteBundle:Commentaire:create" }
+    requirements: { _method: post }
+
+commentaire_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "PidevSiteBundle:Commentaire:edit" }
+
+commentaire_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "PidevSiteBundle:Commentaire:update" }
+    requirements: { _method: post|put }
+
+commentaire_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "PidevSiteBundle:Commentaire:delete" }
+    requirements: { _method: post|delete }

@@ -19,7 +19,7 @@ class Facture
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idfacture;
+    private $id;
 
     /**
      * @var string
@@ -35,9 +35,9 @@ class Facture
      *
      * @return integer 
      */
-    public function getIdfacture()
+    public function getId()
     {
-        return $this->idfacture;
+        return $this->id;
     }
 
     /**

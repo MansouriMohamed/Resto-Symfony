@@ -19,7 +19,7 @@ class Menu
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idmenu;
+    private $id;
 
     /**
      * @var integer
@@ -42,9 +42,9 @@ class Menu
      *
      * @return integer 
      */
-    public function getIdmenu()
+    public function getId()
     {
-        return $this->idmenu;
+        return $this->id;
     }
 
     /**

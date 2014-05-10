@@ -1,0 +1,44 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Plat</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Idrestaurant</th>
+                <td>{{ entity.idRestaurant }}</td>
+            </tr>
+            <tr>
+                <th>Nomplat</th>
+                <td>{{ entity.nomPlat }}</td>
+            </tr>
+            <tr>
+                <th>Descriptionplat</th>
+                <td>{{ entity.descriptionPlat }}</td>
+            </tr>
+            <tr>
+                <th>Prixplat</th>
+                <td>{{ entity.prixPlat }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('plat') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('plat_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

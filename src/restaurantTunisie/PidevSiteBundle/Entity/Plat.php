@@ -19,7 +19,7 @@ class Plat
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idplat;
+    private $id;
 
     /**
      * @var integer
@@ -56,9 +56,9 @@ class Plat
      *
      * @return integer 
      */
-    public function getIdplat()
+    public function getId()
     {
-        return $this->idplat;
+        return $this->id;
     }
 
     /**

@@ -1,0 +1,30 @@
+facture:
+    pattern:  /
+    defaults: { _controller: "PidevSiteBundle:Facture:index" }
+
+facture_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "PidevSiteBundle:Facture:show" }
+
+facture_new:
+    pattern:  /new
+    defaults: { _controller: "PidevSiteBundle:Facture:new" }
+
+facture_create:
+    pattern:  /create
+    defaults: { _controller: "PidevSiteBundle:Facture:create" }
+    requirements: { _method: post }
+
+facture_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "PidevSiteBundle:Facture:edit" }
+
+facture_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "PidevSiteBundle:Facture:update" }
+    requirements: { _method: post|put }
+
+facture_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "PidevSiteBundle:Facture:delete" }
+    requirements: { _method: post|delete }

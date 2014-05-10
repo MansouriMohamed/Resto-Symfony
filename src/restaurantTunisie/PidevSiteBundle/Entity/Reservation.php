@@ -19,7 +19,7 @@ class Reservation
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idreservation;
+    private $id;
 
     /**
      * @var integer
@@ -56,9 +56,9 @@ class Reservation
      *
      * @return integer 
      */
-    public function getIdreservation()
+    public function getId()
     {
-        return $this->idreservation;
+        return $this->id;
     }
 
     /**

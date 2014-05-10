@@ -1,0 +1,30 @@
+plat:
+    pattern:  /
+    defaults: { _controller: "PidevSiteBundle:Plat:index" }
+
+plat_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "PidevSiteBundle:Plat:show" }
+
+plat_new:
+    pattern:  /new
+    defaults: { _controller: "PidevSiteBundle:Plat:new" }
+
+plat_create:
+    pattern:  /create
+    defaults: { _controller: "PidevSiteBundle:Plat:create" }
+    requirements: { _method: post }
+
+plat_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "PidevSiteBundle:Plat:edit" }
+
+plat_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "PidevSiteBundle:Plat:update" }
+    requirements: { _method: post|put }
+
+plat_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "PidevSiteBundle:Plat:delete" }
+    requirements: { _method: post|delete }
