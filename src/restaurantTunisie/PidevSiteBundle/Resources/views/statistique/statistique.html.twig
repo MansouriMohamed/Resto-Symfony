@@ -1,0 +1,78 @@
+{% extends "PidevSiteBundle:Default:layout.html.twig" %}
+{%block content%}
+{% set tunis=0 %}
+    {% set ariana=0 %}
+            {% for restaurant in restaurants %}
+                {% if restaurant.adresse == "Tunis" %}
+                    {% set tunis=tunis+1 %} 
+                {% endif %}
+                {% if restaurant.adresse == "Ariana" %}
+                    {% set ariana=ariana+1 %} 
+                {% endif %}
+            {% endfor %}
+<!doctype html>
+
+<html>
+
+  <head>
+    <title>Statistique</title>
+    <meta charset="utf-8" />
+ 
+	<script src="{{asset('bundles/pidevsite/js/jquery.js')}}"></script>
+	<script src="{{asset('bundles/pidevsite/js/jquery.flot.js')}}"></script>
+	<script src="{{asset('bundles/pidevsite/js/jquery.flot.resize.js')}}"></script>
+	<script src="{{asset('bundles/pidevsite/js/jquery.flot.categories.js')}}"></script>
+	<script src="{{asset('bundles/pidevsite/js/jquery.flot.pie.js')}}"></script>
+  </head>
+
+  <body>
+        <h3 style="margin:auto;" >Statistiques des restaurants :</h3>
+        <div style="margin-top:10px;">
+            <div style="vertical-align:middle;display:inline-block;height:20px;width:20px;background-color:rgb(152, 204, 224);"></div>
+            <span style="vertical-align:middle;">Ariana :{{ ariana }}</span>
+        </div>
+        <div style="margin-top:5px;" >
+            <div style="vertical-align:middle;display:inline-block;height:20px;width:20px;background-color:rgb(241, 215, 78);"></div>
+            <span style="vertical-align:middle;">Tunis :{{ tunis }}</span>
+        </div>
+	<div id="placeholder8" class="flot-placeholder" style="height:300px;width:500px;"></div>
+        <br /><br /><br />
+	<script>
+		$(document).ready(function(){
+			var data_pie = [];
+            data_pie[0] = {
+                label: "Tunis",
+                data:   {{ tunis }}
+            };
+            
+            data_pie[1] = {
+                label: "Ariana",
+                data:   {{ ariana }}
+            };
+			$.plot('#placeholder8', data_pie, {
+            series: {
+                pie: {
+                    show: true,
+                    radius: 1,
+                    label: {
+                        show: true,
+                        radius: 1,
+                        formatter: "<div style='font-size:8pt; text-align:center; padding:2px; color:white;'>aaa<br/>25%</div>",
+                        background: {
+                            opacity: 0.8
+                        }
+                    }
+                }
+            },
+            legend: {
+                show: false
+            }
+        });
+		});
+		
+	</script>
+  </body>
+
+</html>
+
+{% endblock %}

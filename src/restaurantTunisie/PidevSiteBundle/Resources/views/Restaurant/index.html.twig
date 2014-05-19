@@ -1,27 +1,26 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
+{% extends "PidevSiteBundle:Default:layout.html.twig" %}
+{%block content%}
     <h1>Restaurant list</h1>
 
     <table class="records_list">
         <thead>
             <tr>
-                <th>Id</th>
+                
                 <th>Nom</th>
                 <th>Adresse</th>
                 <th>Numero</th>
-                <th>Idrestaurateur</th>
+                
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('restaurant_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td><a href="{{ path('restaurant_show', { 'id': entity.id }) }}"></a></td>
                 <td>{{ entity.nom }}</td>
                 <td>{{ entity.adresse }}</td>
                 <td>{{ entity.numero }}</td>
-                <td>{{ entity.idRestaurateur }}</td>
+                
                 <td>
                 <ul>
                     <li>

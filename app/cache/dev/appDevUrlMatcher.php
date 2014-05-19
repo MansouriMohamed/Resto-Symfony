@@ -171,6 +171,374 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\DefaultController::listeAction',  '_route' => 'pidev_site_liste',);
             }
 
+            if (0 === strpos($pathinfo, '/Site/menu')) {
+                // menu
+                if (rtrim($pathinfo, '/') === '/Site/menu') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'menu');
+                    }
+
+                    return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\MenuController::indexAction',  '_route' => 'menu',);
+                }
+
+                // menu_show
+                if (preg_match('#^/Site/menu/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'menu_show')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\MenuController::showAction',));
+                }
+
+                // menu_new
+                if ($pathinfo === '/Site/menu/new') {
+                    return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\MenuController::newAction',  '_route' => 'menu_new',);
+                }
+
+                // menu_create
+                if ($pathinfo === '/Site/menu/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_menu_create;
+                    }
+
+                    return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\MenuController::createAction',  '_route' => 'menu_create',);
+                }
+                not_menu_create:
+
+                // menu_edit
+                if (preg_match('#^/Site/menu/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'menu_edit')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\MenuController::editAction',));
+                }
+
+                // menu_update
+                if (preg_match('#^/Site/menu/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_menu_update;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'menu_update')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\MenuController::updateAction',));
+                }
+                not_menu_update:
+
+                // menu_delete
+                if (preg_match('#^/Site/menu/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                        $allow = array_merge($allow, array('POST', 'DELETE'));
+                        goto not_menu_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'menu_delete')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\MenuController::deleteAction',));
+                }
+                not_menu_delete:
+
+            }
+
+            if (0 === strpos($pathinfo, '/Site/commentaire')) {
+                // commentaire
+                if (rtrim($pathinfo, '/') === '/Site/commentaire') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'commentaire');
+                    }
+
+                    return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\CommentaireController::indexAction',  '_route' => 'commentaire',);
+                }
+
+                // commentaire_show
+                if (preg_match('#^/Site/commentaire/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentaire_show')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\CommentaireController::showAction',));
+                }
+
+                // commentaire_new
+                if ($pathinfo === '/Site/commentaire/new') {
+                    return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\CommentaireController::newAction',  '_route' => 'commentaire_new',);
+                }
+
+                // commentaire_create
+                if ($pathinfo === '/Site/commentaire/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_commentaire_create;
+                    }
+
+                    return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\CommentaireController::createAction',  '_route' => 'commentaire_create',);
+                }
+                not_commentaire_create:
+
+                // commentaire_edit
+                if (preg_match('#^/Site/commentaire/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentaire_edit')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\CommentaireController::editAction',));
+                }
+
+                // commentaire_update
+                if (preg_match('#^/Site/commentaire/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_commentaire_update;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentaire_update')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\CommentaireController::updateAction',));
+                }
+                not_commentaire_update:
+
+                // commentaire_delete
+                if (preg_match('#^/Site/commentaire/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                        $allow = array_merge($allow, array('POST', 'DELETE'));
+                        goto not_commentaire_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'commentaire_delete')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\CommentaireController::deleteAction',));
+                }
+                not_commentaire_delete:
+
+            }
+
+            if (0 === strpos($pathinfo, '/Site/facture')) {
+                // facture
+                if (rtrim($pathinfo, '/') === '/Site/facture') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'facture');
+                    }
+
+                    return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\FactureController::indexAction',  '_route' => 'facture',);
+                }
+
+                // facture_show
+                if (preg_match('#^/Site/facture/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'facture_show')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\FactureController::showAction',));
+                }
+
+                // facture_new
+                if ($pathinfo === '/Site/facture/new') {
+                    return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\FactureController::newAction',  '_route' => 'facture_new',);
+                }
+
+                // facture_create
+                if ($pathinfo === '/Site/facture/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_facture_create;
+                    }
+
+                    return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\FactureController::createAction',  '_route' => 'facture_create',);
+                }
+                not_facture_create:
+
+                // facture_edit
+                if (preg_match('#^/Site/facture/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'facture_edit')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\FactureController::editAction',));
+                }
+
+                // facture_update
+                if (preg_match('#^/Site/facture/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_facture_update;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'facture_update')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\FactureController::updateAction',));
+                }
+                not_facture_update:
+
+                // facture_delete
+                if (preg_match('#^/Site/facture/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                        $allow = array_merge($allow, array('POST', 'DELETE'));
+                        goto not_facture_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'facture_delete')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\FactureController::deleteAction',));
+                }
+                not_facture_delete:
+
+            }
+
+            if (0 === strpos($pathinfo, '/Site/plat')) {
+                // plat
+                if (rtrim($pathinfo, '/') === '/Site/plat') {
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'plat');
+                    }
+
+                    return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\PlatController::indexAction',  '_route' => 'plat',);
+                }
+
+                // plat_show
+                if (preg_match('#^/Site/plat/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'plat_show')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\PlatController::showAction',));
+                }
+
+                // plat_new
+                if ($pathinfo === '/Site/plat/new') {
+                    return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\PlatController::newAction',  '_route' => 'plat_new',);
+                }
+
+                // plat_create
+                if ($pathinfo === '/Site/plat/create') {
+                    if ($this->context->getMethod() != 'POST') {
+                        $allow[] = 'POST';
+                        goto not_plat_create;
+                    }
+
+                    return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\PlatController::createAction',  '_route' => 'plat_create',);
+                }
+                not_plat_create:
+
+                // plat_edit
+                if (preg_match('#^/Site/plat/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'plat_edit')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\PlatController::editAction',));
+                }
+
+                // plat_update
+                if (preg_match('#^/Site/plat/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                        $allow = array_merge($allow, array('POST', 'PUT'));
+                        goto not_plat_update;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'plat_update')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\PlatController::updateAction',));
+                }
+                not_plat_update:
+
+                // plat_delete
+                if (preg_match('#^/Site/plat/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                        $allow = array_merge($allow, array('POST', 'DELETE'));
+                        goto not_plat_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'plat_delete')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\PlatController::deleteAction',));
+                }
+                not_plat_delete:
+
+            }
+
+            if (0 === strpos($pathinfo, '/Site/res')) {
+                if (0 === strpos($pathinfo, '/Site/reservation')) {
+                    // reservation
+                    if (rtrim($pathinfo, '/') === '/Site/reservation') {
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($pathinfo.'/', 'reservation');
+                        }
+
+                        return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\ReservationController::indexAction',  '_route' => 'reservation',);
+                    }
+
+                    // reservation_show
+                    if (preg_match('#^/Site/reservation/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_show')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\ReservationController::showAction',));
+                    }
+
+                    // reservation_new
+                    if ($pathinfo === '/Site/reservation/new') {
+                        return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\ReservationController::newAction',  '_route' => 'reservation_new',);
+                    }
+
+                    // reservation_create
+                    if ($pathinfo === '/Site/reservation/create') {
+                        if ($this->context->getMethod() != 'POST') {
+                            $allow[] = 'POST';
+                            goto not_reservation_create;
+                        }
+
+                        return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\ReservationController::createAction',  '_route' => 'reservation_create',);
+                    }
+                    not_reservation_create:
+
+                    // reservation_edit
+                    if (preg_match('#^/Site/reservation/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_edit')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\ReservationController::editAction',));
+                    }
+
+                    // reservation_update
+                    if (preg_match('#^/Site/reservation/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                        if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                            $allow = array_merge($allow, array('POST', 'PUT'));
+                            goto not_reservation_update;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_update')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\ReservationController::updateAction',));
+                    }
+                    not_reservation_update:
+
+                    // reservation_delete
+                    if (preg_match('#^/Site/reservation/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                            $allow = array_merge($allow, array('POST', 'DELETE'));
+                            goto not_reservation_delete;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'reservation_delete')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\ReservationController::deleteAction',));
+                    }
+                    not_reservation_delete:
+
+                }
+
+                if (0 === strpos($pathinfo, '/Site/restaurant')) {
+                    // restaurant
+                    if (rtrim($pathinfo, '/') === '/Site/restaurant') {
+                        if (substr($pathinfo, -1) !== '/') {
+                            return $this->redirect($pathinfo.'/', 'restaurant');
+                        }
+
+                        return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\RestaurantController::indexAction',  '_route' => 'restaurant',);
+                    }
+
+                    // restaurant_show
+                    if (preg_match('#^/Site/restaurant/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'restaurant_show')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\RestaurantController::showAction',));
+                    }
+
+                    // restaurant_new
+                    if ($pathinfo === '/Site/restaurant/new') {
+                        return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\RestaurantController::newAction',  '_route' => 'restaurant_new',);
+                    }
+
+                    // restaurant_create
+                    if ($pathinfo === '/Site/restaurant/create') {
+                        if ($this->context->getMethod() != 'POST') {
+                            $allow[] = 'POST';
+                            goto not_restaurant_create;
+                        }
+
+                        return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\RestaurantController::createAction',  '_route' => 'restaurant_create',);
+                    }
+                    not_restaurant_create:
+
+                    // restaurant_edit
+                    if (preg_match('#^/Site/restaurant/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'restaurant_edit')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\RestaurantController::editAction',));
+                    }
+
+                    // restaurant_update
+                    if (preg_match('#^/Site/restaurant/(?P<id>[^/]++)/update$#s', $pathinfo, $matches)) {
+                        if (!in_array($this->context->getMethod(), array('POST', 'PUT'))) {
+                            $allow = array_merge($allow, array('POST', 'PUT'));
+                            goto not_restaurant_update;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'restaurant_update')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\RestaurantController::updateAction',));
+                    }
+                    not_restaurant_update:
+
+                    // restaurant_delete
+                    if (preg_match('#^/Site/restaurant/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                        if (!in_array($this->context->getMethod(), array('POST', 'DELETE'))) {
+                            $allow = array_merge($allow, array('POST', 'DELETE'));
+                            goto not_restaurant_delete;
+                        }
+
+                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'restaurant_delete')), array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\RestaurantController::deleteAction',));
+                    }
+                    not_restaurant_delete:
+
+                }
+
+            }
+
+            // pidev_site_statistique
+            if ($pathinfo === '/Site/statistique') {
+                return array (  '_controller' => 'restaurantTunisie\\PidevSiteBundle\\Controller\\DefaultController::statistiqueAction',  '_route' => 'pidev_site_statistique',);
+            }
+
         }
 
         if (0 === strpos($pathinfo, '/log')) {

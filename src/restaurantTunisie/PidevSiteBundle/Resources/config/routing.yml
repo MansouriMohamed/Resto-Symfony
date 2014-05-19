@@ -10,3 +10,30 @@ pidev_site_liste:
     pattern:  /liste
     defaults: { _controller: PidevSiteBundle:Default:liste }
     
+pidev_site_homepage1:
+    resource:  "routing/menu.yml"
+    prefix:   /menu
+    
+pidev_site_homepage2:
+    resource:  "routing/commentaire.yml"
+    prefix:   /commentaire
+    
+pidev_site_homepage3:
+    resource:  "routing/facture.yml"
+    prefix:   /facture
+        
+pidev_site_homepage5:
+    resource:  "routing/plat.yml"
+    prefix:   /plat
+    
+pidev_site_homepage6:
+    resource:  "routing/reservation.yml"
+    prefix:   /reservation
+    
+pidev_site_homepage7:
+    resource:  "routing/restaurant.yml"
+    prefix:   /restaurant
+    
+pidev_site_statistique:
+    pattern:  /statistique
+    defaults: { _controller: PidevSiteBundle:Default:statistique } 

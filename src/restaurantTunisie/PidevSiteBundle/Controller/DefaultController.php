@@ -20,4 +20,12 @@ class DefaultController extends Controller
         return $this->render('PidevSiteBundle:Default:liste.html.twig', array());
     }
     
+    public function statistiqueAction()
+    {
+         $em = $this->getDoctrine()->getManager();
+         $restaurant = $em->getRepository('PidevSiteBundle:Restaurant')->findAll();
+        return $this->render('PidevSiteBundle:statistique:statistique.html.twig',array(
+                                        'restaurants' => $restaurant
+                                     ));
+    }
 }

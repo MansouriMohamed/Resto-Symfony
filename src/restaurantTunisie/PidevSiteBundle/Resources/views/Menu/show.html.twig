@@ -1,14 +1,14 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
+{% extends "PidevSiteBundle:Default:layout.html.twig" %}
+{%block content%}
     <h1>Menu</h1>
+    <img style="vertical-align:top;" src="{{asset('bundles/PidevSite/img/restaurant.png')}}"/>
+    <div style="display:inline-block;">
+    <table class="record_properties" style=" display: inline-block; margin-left: 10px; ">
+    
 
     <table class="record_properties">
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ entity.id }}</td>
-            </tr>
+            
             <tr>
                 <th>Prix</th>
                 <td>{{ entity.prix }}</td>
@@ -20,7 +20,8 @@
         </tbody>
     </table>
 
-        <ul class="record_actions">
+         <br />
+        <ul class="record_actions" style=" width: 140px; display: inline-block;margin-top: 50px; ">
     <li>
         <a href="{{ path('menu') }}">
             Back to the list
@@ -33,4 +34,7 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+          </div>
+    <div></div>
+    <br /><br /><br />
 {% endblock %}

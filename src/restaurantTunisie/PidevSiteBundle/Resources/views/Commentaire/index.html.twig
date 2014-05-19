@@ -1,27 +1,24 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
+{% extends "PidevSiteBundle:Default:layout.html.twig" %}
+{%block content%}
     <h1>Commentaire list</h1>
 
     <table class="records_list">
         <thead>
             <tr>
-                <th>Id</th>
+                
                 <th>Contenu</th>
                 <th>Date</th>
-                <th>Idrestaurant</th>
-                <th>Idclient</th>
+               
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for entity in entities %}
             <tr>
-                <td><a href="{{ path('commentaire_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td><a href="{{ path('commentaire_show', { 'id': entity.id }) }}"></a></td>
                 <td>{{ entity.contenu }}</td>
                 <td>{{ entity.date }}</td>
-                <td>{{ entity.idRestaurant }}</td>
-                <td>{{ entity.idClient }}</td>
+                
                 <td>
                 <ul>
                     <li>

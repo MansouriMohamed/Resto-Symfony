@@ -1,7 +1,10 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
+{% extends "PidevSiteBundle:Default:layout.html.twig" %}
+{%block content%}
     <h1>Facture</h1>
+    <img style="vertical-align:top;" src="{{asset('bundles/PidevSite/img/restaurant.png')}}"/>
+    <div style="display:inline-block;">
+    <table class="record_properties" style=" display: inline-block; margin-left: 10px; ">
+    
 
     <table class="record_properties">
         <tbody>
@@ -15,8 +18,8 @@
             </tr>
         </tbody>
     </table>
-
-        <ul class="record_actions">
+ <br />
+        <ul class="record_actions" style=" width: 140px; display: inline-block;margin-top: 50px; ">
     <li>
         <a href="{{ path('facture') }}">
             Back to the list
@@ -29,4 +32,7 @@
     </li>
     <li>{{ form(delete_form) }}</li>
 </ul>
+       </div>
+    <div></div>
+    <br /><br /><br />
 {% endblock %}

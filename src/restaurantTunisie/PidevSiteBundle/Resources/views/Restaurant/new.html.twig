@@ -1,6 +1,7 @@
-{% extends '::base.html.twig' %}
+{% extends "PidevSiteBundle:Default:layout.html.twig" %}
+{%block content%}
 
-{% block body -%}
+
     <h1>Restaurant creation</h1>
 
     {{ form(form) }}
@@ -12,4 +13,5 @@
         </a>
     </li>
 </ul>
-{% endblock %}
+
+    {% endblock %}

@@ -38,14 +38,14 @@ class Commentaire
     /**
      * @var integer
      *
-     * @ORM\Column(name="id_restaurant", type="integer", nullable=false)
+     * @ORM\Column(name="idrestaurant", type="integer", nullable=false)
      */
     private $idRestaurant;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="id_client", type="integer", nullable=false)
+     * @ORM\Column(name="idclient", type="integer", nullable=false)
      */
     private $idClient;
 
